@@ -215,9 +215,9 @@ int parse_input(const char *input, uint64_t *val)
 	if (tolower(input[0]) == 'b')
 		base = 2;
 	else if (input[0] == '0')
-		if (tolower(input[1] == 'b'))
+		if (tolower(input[1]) == 'b')
 			base = 2;
-		else if (input[1] == 'x' || input[1] == 'X')
+		else if (tolower(input[1]) == 'x')
 			base = 16;
 		else
 			base = 8;
